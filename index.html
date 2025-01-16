@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/dee01b1aa9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="navbar">
+    
+    
+        <div class="square"></div>
+        <div class="text"><b class="name">Jayansh Khandelwal</b> | IIT GUWAHATI</div>
+        <div class="buttons">
+            <button class="tabs" onclick="change('mainid')">ABOUT ME</button>
+            <button class="tabs" onclick="change('main_resumeid')">RESUME</button>
+            <button class="tabs">PROJECTS</button>
+            <button class="tabs">CONTACT</button>
+        </div>
+    
+    
+    </div>
+    <div class="main" id="mainid">
+        <div class="cont_in_main">
+        <div class="card">
+            <div class="pic_container"><img id="pic" src="./profile_photo.jpg"/></div>
+            <div class="card_name">Jayansh<br>Khandelwal</div>
+            <br>
+            <hr style="width:60px; color:blue; border: 1.2px solid blue;">
+            <br>
+            <div class="college_name">IIT GUWAHATI</div>
+            <br><br>
+            <div class="handles">
+                <i style="font-size: 22px; letter-spacing: 18px;" class="fa-brands fa-facebook"></i>
+                <i style="font-size: 22px; letter-spacing: 18px;" class="fa-brands fa-twitter"></i>
+                <i style="font-size: 22px; letter-spacing: 18px;" class="fa-brands fa-instagram"></i>
+                <i style="font-size: 22px; letter-spacing: 18px;" class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="info">
+            <div class="heading">Hello</div>
+            <div class="subhead">Here's who I am & what I do</div>
+            <br><br>
+            <div class="info_but">
+                <button class="resume" onclick="change('main_resumeid')">RESUME</button>
+                <button class="projects">PROJECTS</button>
+            </div>
+            <br> <br><br>
+            <div class="info_text">I'm a paragraph. Click here to add your own text and edit me. 
+                Its easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+                <br><br>
+                Im a great place for you to tell a story and let your users know a little more about you.
+            </div>
+        </div>
+        </div>
+
+        
+    </div>
+
+    <div class="main_resume" id="main_resumeid">
+        
+        <div class="main_resume_cont">
+            <br><br><br><br>
+            <div class="resume_heading">
+                <div class="res_sq">
+                </div>
+                Resume
+            </div>
+            <br><br><br>
+            <div class="resume_subheading">
+                Education
+                <button class="downloadcv">
+                    DOWNLOAD CV
+                </button>
+            </div>
+            <br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2024-Present</p>
+                    <p class="institute">B.Tech <br>Mathematics and Computing<br>
+                    IIT GUWAHATI
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    Im a paragraph. Click here to add your own text and edit me.<br>
+                     Its easy. Just click “Edit Text” or double click me to add<br>
+                      your own content and make changes to the font.
+                </div>
+            </div>
+            <br><br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2023-2024</p>
+                    <p class="institute">Senior Secondary<br>
+                    VIDYASTHALI PUBLIC SCHOOL
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    Im a paragraph. Click here to add your own text and edit me.<br>
+                     Its easy. Just click “Edit Text” or double click me to add<br>
+                      your own content and make changes to the font.
+                </div>
+            </div>
+            <br><br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2021-2022</p>
+                    <p class="institute">Secondary<br>
+                    KENDRIYA VIDYALAYA DAUSA
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    Im a paragraph. Click here to add your own text and edit me.<br>
+                     Its easy. Just click “Edit Text” or double click me to add<br>
+                      your own content and make changes to the font.
+                </div>
+            </div>
+            <div class="resume_subheading">
+
+            </div>
+            <div class="resume_subheading"></div>
+            <br><br><br><br><br><br>
+        </div>
+        
+
+    </div>
+
+    <footer class="bottom">
+        <div class="bottom_left">@ IIT GUWAHATI</div>
+        <div class="bottom_right">
+            <div class="block" id="one"><div style="font-weight: bold;">Call</div><div>+91 8279234990</div></div>
+            <div class="block" id="two"><div style="font-weight: bold;">Email ID</div><div> jdgupta1980@gmail.com</div></div>
+            <div class="block" id="three"><div style="font-weight: bold;">Follow </div><div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div></div>
+        </div>
+    </footer>
+</body>
+</html>

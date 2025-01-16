@@ -1,0 +1,358 @@
+body{
+    margin:0px;
+    height: 100%;
+}
+
+.navbar{
+    height: 120px;
+    background-color: white;
+    padding: 0px;
+    width:100%;
+    align-items: center;
+    margin: 0;
+    z-index: 100;
+    display: block;
+    position: sticky;
+}
+
+.square{
+    height:15px;
+    width:15px;
+    background-color: blue;
+    position:relative; 
+    top: 40%;  
+    left: 4%;  
+    margin: 0;
+}
+
+.text{
+    color:grey;
+    position: relative;
+    left:6%;
+    top:22%;
+    font-family: "Poppins", serif;
+    font-size: 22px;
+    font-weight: 200;
+    width:35%;
+    letter-spacing: 4px;
+}
+
+.name{
+    color:black;
+    font-family: "Poppins", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.buttons{
+    background-color: white;
+    position: relative;
+    width:50%;
+    left:50%;
+    top:-5%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.tabs{
+    width:180px;
+    height:40px;
+    background-color: transparent;
+    border:0;
+    font-size: 13px;
+}
+
+.tabs:hover{
+    color:blue;
+}
+
+.main{
+    margin:0px;
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(to right, rgb(221, 209, 198)  0%,rgb(221, 209, 198)  40%, white 40%, white 100%);
+    z-index: 2;
+    display: none;
+}
+
+.card{
+    height:100%;
+    width:25%;
+    background-color: rgb(249, 240, 227);
+    box-shadow: -6px 4px 8px 4px rgba(189, 175, 175, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0%;
+}
+
+#pic{
+    height:auto;
+    width:200px;
+    border-radius: 200px; 
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+/* .pic_container{
+    width:200px;
+    height: 200px;
+} */
+
+.card_name{
+    color:black;
+    font-family: "Poppins", serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.college_name{
+    color:grey;
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.handles{
+    height:50px;
+    width:100%;
+    background-color: white;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont_in_main{
+    width:100%;
+    height:500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:30%;
+}
+
+.info{
+    height: 100%;
+    width:30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.heading{
+    color:black;
+    font-family: "Poppins", serif;
+    font-size:98px;
+    font-weight: bolder;
+    width:100%;
+}
+
+.subhead{
+    color:black;
+    font-family: "Poppins", serif;
+    font-size:24px;
+    font-weight: normal;
+    width:100%;
+    
+}
+
+.info_but{
+    width:100%;
+}
+
+.resume{
+    width:130px;
+    height:35px;
+    border:2px solid blue;
+    border-radius: 30px;
+    color:white;
+    background-color: blue;
+    font-weight: bold;
+}
+
+.projects{
+    width:130px;
+    height:35px;
+    border:2px solid black;
+    border-radius: 30px;
+    color:black;
+    background-color: white;
+    font-weight: bold;
+}
+
+.info_text{
+    font-size: 16px;
+    font-family: "Mulish", serif;
+    line-height: 25px;
+}
+
+.resume:hover{
+    background-color: white;
+    border: 1.8px solid blue;
+    color:blue;
+    transition-duration: 0.25s;
+}
+
+.projects:hover{
+    width:130px;
+    height:35px;
+    border:2px solid blue;
+    border-radius: 30px;
+    color:white;
+    background-color: blue;
+    font-weight: bold;
+    transition-duration: 0.25s;
+}
+
+.bottom{
+    width:100%;
+    height:100px;
+    background-color:white;
+    margin:0px;
+    /* position:relative;
+    top:-11%; */
+    position: relative;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom_left{
+    background-color: white;
+    height:100%;
+    width:30%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: "Mulish", serif;
+    color: grey;
+    font-size: 12px;
+}
+
+.bottom_right{
+    background-color: white;
+    height:100%;
+    width:70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.block{
+    height:100%;
+    width:200px;
+    font-family: "Mulish", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.main_resume{
+    background-color: rgb(221, 209, 198);
+    width: 100%;
+    height:100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.res_sq{
+    height:20px;
+    width:20px;
+    background-color: rgb(44, 44, 255);
+    margin-right: 10px;
+}
+
+.resume_heading{
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    color:black;
+    font-family: "Poppins", serif;
+    font-size: 32px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.resume_subheading{
+    width:100%;
+    height:auto;
+    z-index: 100000;
+    float:left;
+    line-height: 35px;
+    color:black;
+    font-family: "Poppins", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.downloadcv{
+    width:130px;
+    height:35px;
+    border:2px solid rgb(44, 44, 255);
+    border-radius: 30px;
+    color:white;
+    background-color: rgb(44, 44, 255);
+    font-weight: bold;
+    position: relative;
+    float: right;
+}
+
+.main_resume_cont{
+    width:50%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top:40%;
+}
+
+.education{
+    height: 30vh;
+    width:100%;
+    background-color: white;
+    border: 0;
+    box-shadow: 2px 2px 15px 1px rgba(157, 155, 155, 0.541);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tenure{
+    font-family: "Poppins", serif;
+    font-size:20px;
+    color: rgb(44, 44, 255);
+    font-weight: bold;
+}
+
+.institute{
+    font-family: "Poppins", serif;
+    font-size:14px;
+    color: black;
+}
+
+.ed_l{
+    text-align: center;
+}
+
+.ed_r{
+    font-family: "Poppins", serif;
+    font-size:15px;
+    color: black;
+}
