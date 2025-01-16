@@ -1,0 +1,15 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "main": "back.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayansh Khandelwal",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.21.2"
+  }
+}
