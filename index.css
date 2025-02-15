@@ -469,7 +469,7 @@ body{
     }
 
     .shortscreen_linebreak{
-        display:block;
+        display: block;
     }
   }
 
@@ -569,13 +569,18 @@ body{
 
 .resume_subheading{
     width:100%;
-    height:auto;
-    float:left;
+    /* height:auto;
+    float:left; */
     line-height: 35px;
     color:black;
     font-family: "Poppins", serif;
     font-size: 20px;
     font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .downloadcv{
@@ -639,6 +644,136 @@ body{
     display: none;
     font-size: 28px;
     cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.login_page{
+    background-color: rgb(221, 209, 198);
+    width: 100%;
+    height:100vh;
+    transition: 0.5s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_card{
+    margin-top:0px;
+    height:500px;
+    width:800px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px rgb(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.login_left{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_left_bottom{
+    width:100%;
+    height:auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Mulish", serif;
+}
+
+#login_template{
+    width:80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.signup{
+    width:120px;
+    height:40px;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: Blue;
+    color:white;
+    font-family: "Mulish", serif;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.login_right{
+    width:50%;
+    height:100%;
+    background-color:  rgb(221, 209, 198,0.5);
+    display: flex;
+    justify-content: center;
+}
+
+#login_form{
+    height: 100%;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#joinus_form{
+    height: 100%;
+    width:80%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#name, #emailid, #username{
+    height:40px;
+    background-color: white;
+    border-width: 0px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+#dont{
+    display: flex;
+}
+
+#already{
+    display: none;
+}
+
+#submit{
+    height:40px;
+    background-color: blue;
+    border-radius: 10px;
+    border-width: 0px;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color:white;
+}
+
+label{
+    font-family: "Poppins", serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login_img{
+    display: none;
+    background-color: white;
+    border-radius: 100%;
+    z-index:10;
+    border-width: 20px;
+}
+
+#login_img{
+    height:100%;
+    width:auto;
 }
 
 
@@ -692,6 +827,60 @@ body{
 
     .bigscreen_linebreak{
         display: none;
+    }
+
+    .login_page{
+        flex-direction: column;
+    }
+
+    .login_img{
+        display: block;
+        position: absolute;
+        top:37%;
+        width:100px;
+        height:100px;
+        border-radius: 100%;
+    }
+
+    .login_card{
+        flex-direction: column-reverse;
+        width:300px;
+        height:auto;
+        align-items: center;
+        box-shadow: 0px 4px 5px 2px rgb(0,0,0,0.1);
+        border-radius: 10px;
+    }
+
+    .login_left_bottom{
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    #login_template{
+        display: none;
+    }
+
+    .login_right{
+        width:100%;
+    }
+
+    .login_left{
+        width:100%;
+    }
+
+    .signup{
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        color:blue;
+        font-size: 12px;
+    }
+
+    #login_form,#joinus_form{
+        margin-top:10px;
+        margin-bottom: 40px;
     }
     
   }
