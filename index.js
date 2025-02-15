@@ -1,7 +1,5 @@
 
-const pages = ["mainid", "main_resumeid"];
-
-
+const pages = ["mainid", "main_resumeid", "login_pageid"];
 
 function change(page){
     for(let i=0;i<pages.length;i++){
@@ -20,6 +18,7 @@ function change(page){
         }
     }
 }
+
 
 function cross_click() {
     document.getElementById(`cross_in_nav`).classList.toggle("change");
@@ -68,3 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Element with ID 'scrollbtn' not found.");
     }
 });
+
+const forms_right = ["login_form", "joinus_form"];
+const forms_left = ["dont", "already"];
+
+function changeform(form){
+    for(let i=0;i<forms_right.length;i++){
+
+        if(forms_right[i]!=form){
+            document.getElementById(`${forms_right[i]}`).style.display="none";
+            document.getElementById(`${forms_left[i]}`).style.display="none";
+        }
+        else{                
+            document.getElementById(`${forms_right[i]}`).style.display="flex";
+            document.getElementById(`${forms_left[i]}`).style.display="flex";
+
+            if(forms_right[i]==`login_form`){
+                document.getElementById(`login_img_cont`).style.top="37%";
+            }
+            else{
+                document.getElementById(`login_img_cont`).style.top="29%";
+            }
+
+        }
+    }
+}
