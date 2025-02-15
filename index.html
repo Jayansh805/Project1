@@ -6,6 +6,7 @@
     <title>Profile</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+    <script src="pg_switch.js"></script>
     <script src="https://kit.fontawesome.com/dee01b1aa9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
@@ -26,7 +27,7 @@
             <div id="opt1" style="color:blue;" class="overlay_buttons" onclick="change('mainid'); cross_click(); closeNav(); change_color('opt1')">ABOUT ME</div>
             <div id="opt2" class="overlay_buttons" onclick="change('main_resumeid'); cross_click(); closeNav(); change_color('opt2')">RESUME</div>
             <div id="opt3" class="overlay_buttons" onclick="change_color('opt3')">PROJECTS</div>
-            <div id="opt4" class="overlay_buttons" onclick="change_color('opt4')">CONTACT</div>
+            <div id="opt4" class="overlay_buttons" onclick="change('login_pageid'); closeNav(); cross_click(); change_color('opt4')">LOGIN</div>
         </div>
 
     </div>
@@ -45,10 +46,10 @@
             </div>
         </div>
         <div class="buttons">
-            <button class="tabs" onclick="change('mainid')">ABOUT ME</button>
+            <button class="tabs" href="#mainid" onclick="change('mainid')">ABOUT ME</button>
             <button class="tabs" onclick="change('main_resumeid')">RESUME</button>
             <button class="tabs">PROJECTS</button>
-            <button class="tabs">CONTACT</button>
+            <button class="tabs" onclick="change('login_pageid')">LOGIN</button>
         </div>
         <div id="cross_in_nav" onclick="cross_click(); openNav()" class="cross">
             <!-- <i class="material-icons" style="color: blue; font-size: 32px;">menu</i> -->
@@ -115,10 +116,13 @@
             <br class="bigscreen_linebreak"><br class="bigscreen_linebreak"><br>
             <div class="resume_subheading">
                 Education
-                <button class="downloadcv">
-                    DOWNLOAD CV
-                </button>
-                <i id="download_icon" class="fa-solid fa-circle-down"></i>
+                <form action="/cv" method="get">
+                    <button class="downloadcv" type="submit">
+                        DOWNLOAD CV
+                    </button>
+                    <button  id="download_icon" type="submit"><i class="fa-solid fa-circle-down"></i></button>
+                </form>
+                
             </div>
             
             <br><br>
@@ -173,6 +177,50 @@
         </div>
         
 
+    </div>
+
+    <div class="login_page" id="login_pageid">
+
+        <div class="login_img" id="login_img_cont">
+            <img id="login_img" src="./login_pic.png" alt="LOGIN">
+        </div>
+
+        <div class="login_card">
+            <div class="login_left">
+                <img src="./login_template.jpg" alt="LOGIN" id="login_template">
+                <div class="login_left_bottom" id="dont">
+                    Don't have an account?<br class="bigscreen_linebreak"><br class="bigscreen_linebreak">
+                    <button class="signup" onclick="changeform('joinus_form')">
+                        Join Us
+                    </button>
+                </div>
+
+                <div class="login_left_bottom" id="already">
+                    Already have an account?<br class="bigscreen_linebreak"><br class="bigscreen_linebreak">
+                    <button class="signup" onclick="changeform('login_form')">
+                        LogIn
+                    </button>
+                </div>
+            </div>
+            <div class="login_right">
+                <form action="/login" id="login_form" method="post">
+                    <label for="name">NAME</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your Good Name" required><br>
+                    <label for="username">USERNAME</label><br>
+                    <input type="password" id="username" name="username" placeholder="Your Username" required><br>
+                    <input type="submit" id="submit" value="LOGIN">
+                </form>
+                <form action="/joinus" id="joinus_form" method="post">
+                    <label for="name">NAME</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your Good Name" required><br>
+                    <label for="username">USERNAME</label><br>
+                    <input type="password" id="username" name="username" placeholder="Your Username" required><br>
+                    <label for="emailid">EMAIL ID</label><br>
+                    <input type="email" id="emailid" name="emailid" placeholder="Your Email Id" required><br>
+                    <input type="submit" id="submit" value="JOIN">
+                </form>
+            </div>
+        </div>
     </div>
 
     <footer class="bottom">
