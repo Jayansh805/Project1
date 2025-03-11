@@ -1,0 +1,25 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "main": "back.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayansh Khandelwal",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "alert": "^6.0.2",
+    "body-parser": "^1.20.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.1",
+    "node-notifier": "^10.0.1",
+    "popups": "^1.1.3"
+  }
+}

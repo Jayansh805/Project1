@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+    <script src="/userprofile_script.js"></script>
+    <title><%=name%> Profile</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav{
+            width:100%;
+            height:80px;
+            background-color: rgb(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logout {
+            color: white;
+            width: 140px;
+            height: 35px;
+            background-color: blue;
+            border-width: 0px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        .attendance{
+            width:100%;
+        }
+
+        .name{
+            font-family: 'Poppins';
+            font-size: 20px;
+            margin-left: 30px;
+        }
+
+
+        .card {
+            margin-top: 40px;
+            height: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding-bottom: 40px;
+            box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.1);
+        }
+
+        .courses{
+            width:100%;
+            height:100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .course_name, .buttons{
+            width:30%;
+            font-family: 'Mulish';
+        }
+
+        .show{
+            width:20%;
+            font-family: 'Mulish';
+        }
+
+        .update_cont{
+            width:100%;
+        }
+
+        #update{
+            float:right;
+            margin-right: 30px;
+        }
+
+        .plus,.minus{
+            width:25px;
+            height:25px;
+            background-color: blue;
+            color:white;
+            text-align: center;
+            border-width: 0px;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        /* #msg{
+            width:80%;
+            height:auto;
+            background-color: lightgreen;
+            border: 1px green solid;
+            border-radius: 10px;
+            color:green;
+            font-family: 'Poppins';
+            font-size: 14px;
+        } */
+
+        .show_current{
+            width:10%;
+            font-family: 'Mulish';
+        }
+        
+
+        @media only screen and (max-width: 768px) {}
+    </style>
+</head>
+
+<body style="background-color: rgb(221, 209, 198);">
+
+    <!-- <div id="msg">
+
+    </div> -->
+
+    <div class="card">
+        <div class="nav">
+            <div class="name">Welcome, <%= name%>
+            </div>
+            <a href="/logout"><button class="logout">LogOut</button></a>
+        </div>
+        <div class="attendance">
+            <div class="courses">
+                <div class="course_name">MA102</div>
+                <div class="buttons">
+                    <button class="minus" onclick="minus('show_current1',0,1)">-</button>
+                    <button class="plus" onclick="plus('show_current1',0,1)">+</button>
+                </div>
+                <div id="show1" class="show"><%=array[0]%>/<%=array[1]+array[0]%></div>
+                <div class="show_current" id="show_current1">
+
+                </div>
+            </div>
+            <div class="courses">
+                <div class="course_name">ME101</div>
+                <div class="buttons">
+                    <button class="minus" onclick="minus('show_current2',2,3)">-</button>
+                    <button class="plus" onclick="plus('show_current2',2,3)">+</button>
+                </div>
+                <div id="show2" class="show"><%=array[2]%>/<%=array[3]+array[2]%></div>
+                <div class="show_current" id="show_current2">
+
+                </div>
+            </div>
+            <div class="courses">
+                <div class="course_name">CS101</div>
+                <div class="buttons">
+                    <button class="minus" onclick="minus('show_current3',4,5)">-</button>
+                    <button class="plus" onclick="plus('show_current3',4,5)">+</button>
+                </div>
+                <div id="show3" class="show"><%=array[4]%>/<%=array[5]+array[4]%></div>
+                <div class="show_current" id="show_current3">
+
+                </div>
+            </div>
+            <div class="courses">
+                <div class="course_name">PH102</div>
+                <div class="buttons">
+                    <button class="minus" onclick="minus('show_current4',6,7)">-</button>
+                    <button class="plus" onclick="plus('show_current4',6,7)">+</button>
+                </div>
+                <div id="show4" class="show"><%=array[6]%>/<%=array[7]+array[6]%></div>
+                <div class="show_current" id="show_current4">
+
+                </div>
+            </div>
+            <div class="courses">
+                <div class="course_name">BT101</div>
+                <div class="buttons">
+                    <button class="minus" onclick="minus('show_current5',8,9)">-</button>
+                    <button class="plus" onclick="plus('show_current5',8,9)">+</button>
+                </div>
+                <div id="show5" class="show"><%=array[8]%>/<%=array[9]+array[8]%></div>
+                <div class="show_current" id="show_current5">
+
+                </div>
+            </div>
+        </div>
+        <div class="update_cont">
+            <button onclick="send_data()" id="update" class="logout">Update</button>
+        </div>
+    </div>
+</body>
+
+</html>

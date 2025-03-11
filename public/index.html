@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="pg_switch.js"></script>
+    <script src="https://kit.fontawesome.com/dee01b1aa9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <div id="myOverlay" class="overlay">
+        <div class="overlay_top">
+            <div id="cross_in_overlay" onclick="cross_click(); closeNav()" class="cross">
+                <!-- <i class="material-icons" style="color: blue; font-size: 32px;">menu</i> -->
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div class="overlay_bottom">
+            <div id="opt1" style="color:blue;" class="overlay_buttons" onclick="change('mainid'); cross_click(); closeNav(); change_color('opt1')">ABOUT ME</div>
+            <div id="opt2" class="overlay_buttons" onclick="change('main_resumeid'); cross_click(); closeNav(); change_color('opt2')">RESUME</div>
+            <div id="opt3" class="overlay_buttons" onclick="change_color('opt3')">PROJECTS</div>
+            <div id="opt4" class="overlay_buttons" onclick="change('login_pageid'); closeNav(); cross_click(); change_color('opt4')">LOGIN</div>
+        </div>
+
+    </div>
+
+    <div id="scrollbtn" class="scrollup">
+        <a style="color:blue;" href="#section1"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+
+    <div class="navbar" id="section1">
+        <div class="vertical_line">
+        </div>
+        <div class="sq_and_text" onclick="change('mainid'); change_color('opt1')">
+            <div class="square"></div>
+            <div class="text"><b class="name">Jayansh Khandelwal</b> 
+                <br class="shortscreen_linebreak"><b class="bigscreen_linebreak">| </b>IIT GUWAHATI
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="tabs" href="#mainid" onclick="change('mainid')">ABOUT ME</button>
+            <button class="tabs" onclick="change('main_resumeid')">RESUME</button>
+            <button class="tabs">PROJECTS</button>
+            <button class="tabs" onclick="change('login_pageid')">LOGIN</button>
+        </div>
+        <div id="cross_in_nav" onclick="cross_click(); openNav()" class="cross">
+            <!-- <i class="material-icons" style="color: blue; font-size: 32px;">menu</i> -->
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    
+    </div>
+
+    <div class="main" id="mainid">
+        <div class="cont_in_main">
+        <div class="card">
+            
+            <div class="pic_container"><img id="pic" src="./profile_photo.jpg"/></div>
+            <div class="card_name">Jayansh<br>Khandelwal</div>
+            <br>
+            <hr style="width:60px; color:blue; border: 1.2px solid blue;">
+            <br>
+            <div class="college_name">IIT GUWAHATI</div>
+            <div id="card_buttons" class="info_but">
+                <button class="resume" onclick="change('main_resumeid'); change_color('opt2')">RESUME</button>
+                <button class="projects">PROJECTS</button>
+            </div>
+            <br><br>
+            <div class="handles">
+                <i style="font-size: 22px; letter-spacing: 18px; cursor: pointer;" class="fa-brands fa-facebook"></i>
+                <i style="font-size: 22px; letter-spacing: 18px; cursor: pointer;" class="fa-brands fa-twitter"></i>
+                <i onclick="instagram()" style="font-size: 22px; letter-spacing: 18px; cursor: pointer;" class="fa-brands fa-instagram"></i>
+                <i onclick="linkedin()" style="font-size: 22px; letter-spacing: 18px; cursor: pointer;" class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="info">
+            <div class="heading">Hello</div>
+            <div class="subhead">Here's who I am & what I do</div>
+            
+            <div class="info_but">
+                <br><br>
+                <button class="resume" onclick="change('main_resumeid')">RESUME</button>
+                <button class="projects">PROJECTS</button>
+                <br> <br>
+            </div>
+            <br>
+            <div class="info_text">I am Jayansh Khandelwal currently studying in IIT Guwahati  
+                <br class="shortscreen_linebreak">and pursuing B.Tech. in Mathematics and Computing. <br class="shortscreen_linebreak">I belong to a small town called Dausa in Rajasthan and am passionate to learn and create.
+                <br><br>
+                It's a great place to connect.<br class="shortscreen_linebreak">You can connect by joining us on the login page. Thankyou
+            </div>
+        </div>
+        </div>
+
+        
+    </div>
+
+    <div class="main_resume" id="main_resumeid">
+        
+        <div class="main_resume_cont">
+            <br class="bigscreen_linebreak"><br class="bigscreen_linebreak"><br><br>
+            <div class="resume_heading">
+                <div class="res_sq">
+                </div>
+                Resume
+            </div>
+            <br class="bigscreen_linebreak"><br class="bigscreen_linebreak"><br>
+            <div class="resume_subheading">
+                Education
+                <form action="/cv" method="get">
+                    <button class="downloadcv" type="submit">
+                        DOWNLOAD CV
+                    </button>
+                    <button  id="download_icon" type="submit"><i class="fa-solid fa-circle-down"></i></button>
+                </form>
+                
+            </div>
+            
+            <br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2024-Present</p>
+                    <p class="institute">B.Tech <br>Mathematics and Computing<br>
+                    IIT GUWAHATI
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    I am pursuing B.Tech. in Mathematics and Computing<br>at IIT GUWAHATI.<br>
+                    My current CGPA is 9.65 at the end of 1st Semester.
+                </div>
+            </div>
+            <br><br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2023-2024</p>
+                    <p class="institute">Senior Secondary<br>
+                    VIDYASTHALI PUBLIC SCHOOL
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    I completed my Senior Secondary Education from <br>Vidyasthali Public School, Dausa.
+                     I got a decent grade<br> of 97.4% in PCM group in my 12th grade.
+                </div>
+            </div>
+            <br><br><br>
+            <div class="education">
+                <div class="ed_l">
+                    <p class="tenure">2021-2022</p>
+                    <p class="institute">Secondary<br>
+                    KENDRIYA VIDYALAYA DAUSA
+                    </p>
+
+                </div>
+                <div class="ed_r">
+                    I completed mySecondary Education from <br>Kendriya Vidyalaya Dausa.
+                     I got a decent grade of<br> 98.8% in my 10th grade.
+                </div>
+            </div>
+            <div class="resume_subheading">
+
+            </div>
+            <div class="resume_subheading"></div>
+            <br><br><br><br><br><br>
+        </div>
+        
+
+    </div>
+
+    <div class="login_page" id="login_pageid">
+
+        <div class="login_img" id="login_img_cont">
+            <img id="login_img" src="./login_pic.png" alt="LOGIN">
+        </div>
+
+        <div class="login_card">
+            <div class="login_left">
+                <img src="./login_template.jpg" alt="LOGIN" id="login_template">
+                <div class="login_left_bottom" id="dont">
+                    Don't have an account?<br class="bigscreen_linebreak"><br class="bigscreen_linebreak">
+                    <button class="signup" onclick="changeform('joinus_form')">
+                        Join Us
+                    </button>
+                </div>
+
+                <div class="login_left_bottom" id="already">
+                    Already have an account?<br class="bigscreen_linebreak"><br class="bigscreen_linebreak">
+                    <button class="signup" onclick="changeform('login_form')">
+                        LogIn
+                    </button>
+                </div>
+            </div>
+            <div class="login_right">
+                <form action="/login" id="login_form" method="post">
+                    <label for="name">NAME</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your Good Name" required><br>
+                    <label for="username">USERNAME</label><br>
+                    <input type="password" id="username" name="username" placeholder="Your Username" required><br>
+                    <input type="submit" id="submit" value="LOGIN">
+                </form>
+                <form action="/joinus" id="joinus_form" method="post">
+                    <label for="name">NAME</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your Good Name" required><br>
+                    <label for="username">USERNAME</label><br>
+                    <input type="password" id="username" name="username" placeholder="Your Username" required><br>
+                    <label for="emailid">EMAIL ID</label><br>
+                    <input type="email" id="emailid" name="emailid" placeholder="Your Email Id" required><br>
+                    <input type="submit" id="submit" value="JOIN">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bottom">
+        <div class="bottom_left">@ IIT GUWAHATI</div>
+        <div class="bottom_right">
+            <div class="block" id="one"><div style="font-weight: bold;">Call</div><div>+91 8279234990</div></div>
+            <div class="block" id="two"><div style="font-weight: bold;">Email ID</div><div> jdgupta1980@gmail.com</div></div>
+            <div class="block" id="three">
+                <div style="font-weight: bold;">Follow </div>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
